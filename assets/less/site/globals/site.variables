@@ -1,0 +1,22 @@
+/* Override @primaryColor to override the site-wide accents. 
+  color schemas for DHBW: RED #e2001a  GRAY #5c6971
+*/
+@DHBWColorRed: #e2001a;     /* corresponds to 44% brightness */
+@DHBWColorRedDark: #B30015; /* corresponds to 35% brightness */ 
+
+@DHBWColorGrey: #5c6971;     /* corresponds to 40% brightness */
+@DHBWColorGreyDark: #454e54; /* corresponds to 30% brightness */
+
+/*  Accents */
+@primaryColor: @DHBWColorRed ;  
+
+/* Header */
+@navbarBackgroundImage: linear-gradient(
+  45deg,
+  @primaryColor,
+  @primaryColor 55%,
+  @DHBWColorRedDark
+);
+/* Footer */
+@footerLightColor: @primaryColor ;
+@footerDarkColor:  @DHBWColorGrey  ;

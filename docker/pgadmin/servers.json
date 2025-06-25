@@ -1,12 +1,12 @@
 {
   "Servers": {
     "1": {
-      "Name": "rdmkaiser-db",
+      "Name": "fdm-dhbw-theme-db",
       "Group": "Servers",
-      "Host": "rdmkaiser-db-1",
+      "Host": "fdm-dhbw-theme-db-1",
       "Port": 5432,
       "MaintenanceDB": "postgres",
-      "Username": "rdmkaiser",
+      "Username": "fdm-dhbw-theme",
       "SSLMode": "prefer"
     }
   }

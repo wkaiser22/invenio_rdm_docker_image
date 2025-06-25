@@ -1,0 +1,12 @@
+pyproject.toml
+setup.cfg
+setup.py
+fdm_dhbw/__init__.py
+fdm_dhbw/views.py
+fdm_dhbw/webpack.py
+fdm_dhbw_theme.egg-info/PKG-INFO
+fdm_dhbw_theme.egg-info/SOURCES.txt
+fdm_dhbw_theme.egg-info/dependency_links.txt
+fdm_dhbw_theme.egg-info/entry_points.txt
+fdm_dhbw_theme.egg-info/requires.txt
+fdm_dhbw_theme.egg-info/top_level.txt

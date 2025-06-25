@@ -1,0 +1,5 @@
+[invenio_assets.webpack]
+fdm_dhbw_theme = fdm_dhbw.webpack:theme
+
+[invenio_base.blueprints]
+fdm_dhbw_views = fdm_dhbw.views:create_blueprint

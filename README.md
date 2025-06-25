@@ -1,4 +1,4 @@
-# rdmkaiser
+# fdm@DHBW
 
 Welcome to your InvenioRDM instance.
 

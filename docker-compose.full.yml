@@ -67,7 +67,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["uwsgi /opt/invenio/var/instance/uwsgi_ui.ini"]
-    image: rdmkaiser:latest
+    image: fdm-dhbw-theme:latest
     ports:
       - "5000"
     volumes:
@@ -79,7 +79,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["uwsgi /opt/invenio/var/instance/uwsgi_rest.ini"]
-    image: rdmkaiser:latest
+    image: fdm-dhbw-theme:latest
     ports:
       - "5000"
 
@@ -89,7 +89,7 @@ services:
       file: docker-services.yml
       service: app
     command: ["celery -A invenio_app.celery worker --beat --loglevel=INFO"]
-    image: rdmkaiser:latest
+    image: fdm-dhbw-theme:latest
     depends_on:
       search:
         condition: service_started

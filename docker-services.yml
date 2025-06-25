@@ -5,7 +5,7 @@ services:
       context: ./
       args:
         - ENVIRONMENT=DEV
-    image: rdmkaiser
+    image: fdm-dhbw-theme
     restart: "unless-stopped"
     environment:
       - "INVENIO_ACCOUNTS_SESSION_REDIS_URL=redis://cache:6379/1"
@@ -17,12 +17,12 @@ services:
       - "INVENIO_COMMUNITIES_IDENTITIES_CACHE_REDIS_URL=redis://cache:6379/4"
       - "INVENIO_SEARCH_HOSTS=['search:9200']"
       - "INVENIO_SECRET_KEY=CHANGE_ME"
-      - "INVENIO_SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://rdmkaiser:rdmkaiser@db/rdmkaiser"
+      - "INVENIO_SQLALCHEMY_DATABASE_URI=postgresql+psycopg2://fdm-dhbw-theme:fdm-dhbw-theme@db/fdm-dhbw-theme"
       - "INVENIO_WSGI_PROXIES=2"
       - "INVENIO_RATELIMIT_STORAGE_URL=redis://cache:6379/3"
   frontend:
     build: ./docker/nginx/
-    image: rdmkaiser-frontend
+    image: fdm-dhbw-theme-frontend
     restart: "unless-stopped"
     ports:
       - "80"
@@ -37,9 +37,9 @@ services:
     image: postgres:14.13
     restart: "unless-stopped"
     environment:
-      - "POSTGRES_USER=rdmkaiser"
-      - "POSTGRES_PASSWORD=rdmkaiser"
-      - "POSTGRES_DB=rdmkaiser"
+      - "POSTGRES_USER=fdm-dhbw-theme"
+      - "POSTGRES_PASSWORD=fdm-dhbw-theme"
+      - "POSTGRES_DB=fdm-dhbw-theme"
     ports:
       - "5432:5432"
   pgadmin:
@@ -48,8 +48,8 @@ services:
     ports:
       - "5050:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: "info@rdmkaiser.com"
-      PGADMIN_DEFAULT_PASSWORD: "rdmkaiser"
+      PGADMIN_DEFAULT_EMAIL: "info@fdm.dhbw.de"
+      PGADMIN_DEFAULT_PASSWORD: "fdm-dhbw-theme"
     volumes:
       - ./docker/pgadmin/servers.json:/pgadmin4/servers.json
   mq:

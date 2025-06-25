@@ -1,0 +1,103 @@
+{#
+  Copyright (C) 2019-2020 CERN.
+  Copyright (C) 2019-2020 Northwestern University.
+  Copyright (C) 2021 New York University.
+
+  Invenio App RDM is free software; you can redistribute it and/or modify it
+  under the terms of the MIT License; see LICENSE file for more details.
+#}
+{% from "invenio_app_rdm/macros/records_list.html" import records_list %}
+{% from "invenio_communities/macros/communities_carousel.html" import communities_carousel %}
+
+{%- extends "invenio_theme/frontpage.html" %}
+
+{%- block page_header %}
+  {%- include "invenio_app_rdm/header_frontpage.html" %}
+{%- endblock page_header %}
+
+{%- block page_body %}
+
+  {%- block intro_section %}
+    <section class="invenio-rdm-project-section section-content white-bg">
+    <div class="ui container two column grid center aligned vertically padded relaxed stackable">
+     
+      <div class="rdm-goal six wide column">
+        <a href="{{ url_for('invenio_search_ui.search') }}?sort=newest"> <i class="file big icon"></i>
+          <h3>{{ _("Letzte Uploads") }}</h3>
+        </a>
+        <br>
+        <p>{{ _("Welche Daten wurden zuletzt hochgeladen?") }}</p>
+      </div>
+      
+      <div class="rdm-goal six wide column">
+        <a href="https://www.dhbw.de/open-science" target="_blank" rel="noopener noreferrer"> <i class="key big icon"></i>
+        <h3>Open Science @ DHBW</h3></a>
+        <br>
+        <p> Welche Open Science Ziele verfolgt die DHBW?</p>
+      </div>
+
+      <div class="rdm-goal six wide column">
+        <a href="https://www.mannheim.dhbw.de/forschung-transfer/projekte/fdmdhbw/einfuehrung-forschungsdatenmanagement" target="_blank" rel="noopener noreferrer">
+          <i class="info large icon"></i><h3>FDM Einführung</h3>
+        </a>
+        <br>
+        <p> Was ist Forschungs- bzw. Innnovations-Datenmanagement?</p>
+      </div>
+
+
+      <div class="rdm-goal six wide column">
+        <a href="{{ url_for('invenio_app_rdm.help_search') }}"> <i class="search big icon"></i>
+          <h3>{{ _("Such-Hilfe") }}</h3>
+        </a>
+        <br>
+        <p>{{ _("Wie suche ich nach Daten?") }}</p>
+      </div>
+
+      <div class="rdm-goal six wide column">
+        <i class="key big icon"></i>
+        <h3>Open Science @ DHBW</h3>
+        <p> Das Innovations- und Forschungsdatenmanagement System der DHBW ist 
+          Teil der <a
+                  href="https://www.dhbw.de/open-science">Open Science Aktivitäten </a> 
+                  an der <a href="https://www.dhbw.de">DHBW</a>.</p>
+      </div>
+
+      
+    </div>
+
+  </section>
+  {%- endblock intro_section %}
+
+  {%- block top_banner %}
+    {{ communities_carousel() }}
+  {%- endblock top_banner %}
+
+  {%- block grid_section %}
+    <div class="ui stackable grid container rel-mt-2">
+
+      {% block main_column %}
+        <div class="eleven wide computer sixteen wide tablet column">
+
+          {#
+          {% block main_column_content %}
+            {{ records_list() }} 
+          {% endblock main_column_content %}
+          #}
+
+        </div>
+      {% endblock main_column %}
+
+      {% block side_column %}
+        <aside class="five wide computer sixteen wide tablet column">
+
+          {% block side_column_content %}{% endblock side_column_content %}
+
+        </aside>
+      {% endblock side_column %}
+    </div>
+  {%- endblock grid_section %}
+
+  {%- block bottom_section %}
+  {%- endblock bottom_section %}
+
+{%- endblock page_body %}
