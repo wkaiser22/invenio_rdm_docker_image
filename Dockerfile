@@ -10,6 +10,9 @@
 
 FROM registry.cern.ch/inveniosoftware/almalinux:1
 ENV INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
+
+
+
 COPY site ./site
 COPY Pipfile Pipfile.lock ./
 RUN pip install --upgrade pip setuptools wheel build
