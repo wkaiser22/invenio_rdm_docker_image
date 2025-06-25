@@ -15,7 +15,7 @@ ENV INVENIO_INSTANCE_PATH=/opt/invenio/var/instance
 COPY site ./site
 COPY Pipfile Pipfile.lock ./
 
-RUN pipenv install --deploy --system 
+#RUN pipenv install --deploy --system 
 
 
 COPY ./docker/uwsgi/ ${INVENIO_INSTANCE_PATH}
