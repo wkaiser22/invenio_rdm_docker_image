@@ -1,5 +1,0 @@
-[invenio_assets.webpack]
-rdmkaiser_theme = rdmkaiser.webpack:theme
-
-[invenio_base.blueprints]
-rdmkaiser_views = rdmkaiser.views:create_blueprint
