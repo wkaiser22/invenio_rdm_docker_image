@@ -1,0 +1,9 @@
+- url: /data-submission-agreement
+  title: Data Submission Agreement
+  description: Data Submission Agreement 
+  template: data_submission_agreement.html
+
+- url: /disclaimer
+  title: Disclaimer/Nutzungsausschluss
+  description: Disclaimer/Nutzungsausschluss 
+  template: disclaimer.html
