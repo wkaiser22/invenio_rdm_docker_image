@@ -29,6 +29,22 @@
         <p>{{ _("Welche Daten wurden zuletzt hochgeladen?") }}</p>
       </div>
       
+    <div class="rdm-goal six wide column">
+        <a href="{{ url_for('invenio_app_rdm.data-submission-agreement') }}" target="_blank" rel="noopener noreferrer"> <i class="file big icon"></i>
+          <h3>{{ _("Data Submission Agreement") }}</h3>
+        </a>
+        <br>
+        <p>{{ _("Welche Regeln gelten für die Nutzung von FDM@DHBW?") }}</p>
+      </div>
+
+      <div class="rdm-goal six wide column">
+        <a href="{{ url_for('invenio_app_rdm.help_search') }}"> <i class="search big icon"></i>
+          <h3>{{ _("Such-Hilfe") }}</h3>
+        </a>
+        <br>
+        <p>{{ _("Wie suche ich nach Daten?") }}</p>
+      </div>
+      
       <div class="rdm-goal six wide column">
         <a href="https://www.dhbw.de/open-science" target="_blank" rel="noopener noreferrer"> <i class="key big icon"></i>
         <h3>Open Science @ DHBW</h3></a>
@@ -45,23 +61,7 @@
       </div>
 
 
-      <div class="rdm-goal six wide column">
-        <a href="{{ url_for('invenio_app_rdm.help_search') }}"> <i class="search big icon"></i>
-          <h3>{{ _("Such-Hilfe") }}</h3>
-        </a>
-        <br>
-        <p>{{ _("Wie suche ich nach Daten?") }}</p>
-      </div>
-
-      <div class="rdm-goal six wide column">
-        <i class="key big icon"></i>
-        <h3>Open Science @ DHBW</h3>
-        <p> Das Innovations- und Forschungsdatenmanagement System der DHBW ist 
-          Teil der <a
-                  href="https://www.dhbw.de/open-science">Open Science Aktivitäten </a> 
-                  an der <a href="https://www.dhbw.de">DHBW</a>.</p>
-      </div>
-
+      
       
     </div>
 

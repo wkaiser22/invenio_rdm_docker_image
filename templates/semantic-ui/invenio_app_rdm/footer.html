@@ -14,10 +14,11 @@
     <div class="ui container app-rdm-footer">
       {%- block footer_top_left %}
         <div class="ui grid app-rdm-footer">
-        <div class="rdm-footer five wide tablet two wide computer column">
+        <div class="rdm-footer five wide tablet three wide computer column">
           <h2 class="ui small header">{{ _("Terms") }}</h2>
-          <p> Data Privacy </p>
-          <p> Disclaimer</p>
+          <p><a href="{{ url_for('invenio_app_rdm.data-submission-agreement') }}" target="_blank" rel="noopener noreferrer">{{ _("Data Submission Agreement") }}</a></p>
+          <p><a href="{{ url_for('invenio_app_rdm.disclaimer') }}" target="_blank" rel="noopener noreferrer">{{ _("Disclaimer") }}</a></p>
+          <p><a href="https://www.dhbw.de/datenschutz" target="_blank" rel="noopener noreferrer">{{ _("Data Privacy") }}</a></p> </p>
         </div>
         <div class="rdm-footer five wide tablet two wide computer column">
           <h2 class="ui small header">{{ _("About") }}</h2>
